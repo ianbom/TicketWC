@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* === BASE === */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* === PSN PRIMARY (NAVY) === */
+    --primary: 211 51% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    /* === PSN ACCENT (GOLD) === */
+    --secondary: 45 75% 55%;
+    --secondary-foreground: 240 10% 4%;
+
+    --accent: 45 75% 55%;
+    --accent-foreground: 240 10% 4%;
+
+    /* === MUTED / BORDER === */
+    --muted: 220 10% 95%;
+    --muted-foreground: 220 10% 40%;
+
+    --border: 220 10% 90%;
+    --input: 220 10% 90%;
+    --ring: 211 51% 36%;
+
+    /* === CHART COLOR SET === */
+    --chart-1: 211 51% 36%;
+    /* navy */
+    --chart-2: 45 75% 55%;
+    /* gold */
+    --chart-3: 210 40% 50%;
+    --chart-4: 180 30% 45%;
+    --chart-5: 0 0% 40%;
+
+    --radius: 0.5rem;
+
+    /* === SIDEBAR (BLUE THEME) === */
+    /* === SIDEBAR (PSN BLUE THEME) === */
+    --sidebar-background: 211 100% 96%;
+    /* Biru muda soft */
+    --sidebar-foreground: 211 51% 36%;
+    /* Biru PSN */
+    --sidebar-primary: 211 51% 36%;
+    /* Biru PSN */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 211 51% 90%;
+    /* Biru sangat muda */
+    --sidebar-accent-foreground: 211 51% 36%;
+    --sidebar-border: 211 30% 85%;
+    --sidebar-ring: 211 51% 36%;
+
+
+  }
+
+  .dark {
+    /* === BASE === */
+    --background: 220 15% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 15% 13%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 15% 13%;
+    --popover-foreground: 0 0% 98%;
+
+    /* === PSN NAVY (BRIGHTER DARK MODE) === */
+    --primary: 211 51% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    /* === PSN GOLD === */
+    --secondary: 45 75% 55%;
+    --secondary-foreground: 0 0% 10%;
+
+    --accent: 45 75% 55%;
+    --accent-foreground: 0 0% 10%;
+
+    --muted: 220 10% 25%;
+    --muted-foreground: 220 10% 75%;
+
+    --border: 220 10% 25%;
+    --input: 220 10% 20%;
+    --ring: 45 75% 55%;
+
+    --chart-1: 211 51% 50%;
+    --chart-2: 45 75% 60%;
+    --chart-3: 210 40% 60%;
+    --chart-4: 180 30% 55%;
+    --chart-5: 0 0% 70%;
+
+    /* === SIDEBAR DARK === */
+    /* === SIDEBAR (PSN BLUE — STRONGER) === */
+
+--sidebar-background: 211 51% 88%;
+--sidebar-foreground: 211 51% 28%;
+--sidebar-primary: 211 51% 36%;
+--sidebar-primary-foreground: 0 0% 100%;
+
+--sidebar-accent: 211 51% 85%;         /* Biru muda */
+--sidebar-accent-foreground: 211 51% 30%;
+
+--sidebar-border: 211 30% 75%;         /* Border kebiruan */
+--sidebar-ring: 211 51% 36%;
+
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.shadow-left {
+  box-shadow: -6px 0 8px -2px rgba(0, 0, 0, 0.15);
+}
+
+/* FIX STICKY FOR SHADCN TABLE */
+table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+.ticket-table-wrapper table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* @keyframes glow {
+  0% { box-shadow: 0 0 0px rgba(59, 130, 246, 0.0); }
+  50% { box-shadow: 0 0 12px rgba(59, 130, 246, 0.6); }
+  100% { box-shadow: 0 0 0px rgba(59, 130, 246, 0.0); }
+}
+
+.animate-glow {
+  animation: glow 1.6s infinite ease-in-out;
+} */
