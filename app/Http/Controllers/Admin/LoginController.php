@@ -18,7 +18,7 @@ class LoginController extends Controller
             return redirect()->route('ticket.dashboard');
         }
 
-        return Inertia::render('Login', [
+        return Inertia::render('login', [
             'recaptcha_site_key' => env('RECAPTCHA_SITE_KEY')
         ]);
     }

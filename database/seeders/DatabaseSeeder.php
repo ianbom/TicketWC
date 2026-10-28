@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             LocationSeeder::class,
             PositionSeeder::class,
             CategorySeeder::class,
+            UserSeeder::class,
         ]);
     }
 }
